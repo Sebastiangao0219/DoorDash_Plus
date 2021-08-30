@@ -1,8 +1,6 @@
 package com.laioffer.onlineOrder.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -16,6 +14,10 @@ public class Customer implements Serializable {
     private String lastName;
     private String password;
     private boolean enabled;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(unique = true)// 保证customer和cart的一一对应关系，保证每个customer都有一个cart
+    private Cart cart;
 
     public String getEmail() {
         return email;
@@ -55,5 +57,13 @@ public class Customer implements Serializable {
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
+    }
+
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
     }
 }

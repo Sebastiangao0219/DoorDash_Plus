@@ -1,5 +1,7 @@
 package com.laioffer.onlineOrder.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -16,6 +18,13 @@ public class OrderItem implements Serializable {
     private int quantity;
 
     private double price;
+
+    @ManyToOne
+    private MenuItem menuitem;
+
+    @ManyToOne
+    @JsonIgnore
+    private Cart cart;
 
     public int getId() {
         return id;
@@ -39,5 +48,21 @@ public class OrderItem implements Serializable {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public MenuItem getMenuitem() {
+        return menuitem;
+    }
+
+    public void setMenuitem(MenuItem menuitem) {
+        this.menuitem = menuitem;
+    }
+
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
     }
 }
