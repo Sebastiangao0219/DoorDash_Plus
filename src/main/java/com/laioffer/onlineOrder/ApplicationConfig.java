@@ -15,6 +15,7 @@ public class ApplicationConfig {
     private final String DBURL = "jdbc:mysql://laiproject-database.cndiii0smgv6.us-east-2.rds.amazonaws.com:3306/onlineOrder?createDatabaseIfNotExist=true&serverTimezone=UTC";
     private final String USERNAME = "admin";
     private final String PASSWORD = "Gao19890219!!";
+
     @Bean(name = "sessionFactory")
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();

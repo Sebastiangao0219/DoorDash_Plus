@@ -23,6 +23,6 @@ public class SignUpController {
     @RequestMapping(value = "/signup", method = RequestMethod.POST) // match前端发来的请求
     @ResponseStatus(value = HttpStatus.CREATED)// 如果创建成功，返回CREATED给前端，显示201。
     public void signUp(@RequestBody Customer customer) { // @RequestBody 会把传进来的数据生成Customer obj
-        
+        customerService.signUp(customer);
     }
 }
