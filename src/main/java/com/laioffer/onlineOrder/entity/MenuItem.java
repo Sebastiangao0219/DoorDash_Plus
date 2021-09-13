@@ -12,6 +12,8 @@ import java.io.Serializable;
 @Table(name="menuitem")
 public class MenuItem implements Serializable {
 
+
+
     private static final long serialVersionUID = 7551999649936522523L;
     @Id
     private int id;

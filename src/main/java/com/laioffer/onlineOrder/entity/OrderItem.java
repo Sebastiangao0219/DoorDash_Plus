@@ -54,7 +54,7 @@ public class OrderItem implements Serializable {
         return menuitem;
     }
 
-    public void setMenuitem(MenuItem menuitem) {
+    public void setMenuItem(MenuItem menuitem) {
         this.menuitem = menuitem;
     }
 
