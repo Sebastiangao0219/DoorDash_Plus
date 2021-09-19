@@ -13,8 +13,8 @@ import java.util.Properties;
 @EnableWebMvc// 启动SpringMvc相关的class
 public class ApplicationConfig {
     private final String DBURL = "jdbc:mysql://laiproject-database.cndiii0smgv6.us-east-2.rds.amazonaws.com:3306/onlineOrder?createDatabaseIfNotExist=true&serverTimezone=UTC";
-    private final String USERNAME = "admin";
-    private final String PASSWORD = "Gao19890219!!";
+    private final String USERNAME = ;
+    private final String PASSWORD = ;
 
     @Bean(name = "sessionFactory")
     public LocalSessionFactoryBean sessionFactory() {
